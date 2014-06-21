@@ -1,0 +1,3 @@
+coreComponent(ac, fan)
+coreComponent(ac, motor)
+coreComponent(ac, plastic)

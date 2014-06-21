@@ -1,0 +1,3 @@
+coreComponent(vaccum_cleaner, button)
+coreComponent(vaccum_cleaner, motor)
+coreComponent(vaccum_cleaner, pipe)

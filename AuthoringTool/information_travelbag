@@ -1,0 +1,3 @@
+coreComponent(travelbag, cloth)
+coreComponent(travelbag, pockets)
+purposeServingAccessory(travelbag, strap)

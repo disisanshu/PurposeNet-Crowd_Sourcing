@@ -1,0 +1,3 @@
+coreComponent(stopwatch, belt)
+nonPurposeServingAccessory(stopwatch, light)
+coreComponent(stopwatch, machine)

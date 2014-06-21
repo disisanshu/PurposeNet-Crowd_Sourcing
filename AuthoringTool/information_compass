@@ -1,0 +1,4 @@
+coreComponent(compass, adjusting_screw)
+coreComponent(compass, pencil_holder)
+coreComponent(compass, pointer)
+nonPurposeServingAccessory(compass, screw)

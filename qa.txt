@@ -1,0 +1,2 @@
+change the first,second and third names to something userfriendly
+skip the main artifact

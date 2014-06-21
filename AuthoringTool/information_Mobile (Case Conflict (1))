@@ -1,0 +1,4 @@
+coreComponent(mobile, keypad)
+coreComponent(mobile, screen)
+coreComponent(mobile, battery)
+purposeServingAccessory(mobile, earphones)

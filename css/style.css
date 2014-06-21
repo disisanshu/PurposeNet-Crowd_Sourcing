@@ -1,0 +1,18 @@
+
+@font-face {
+    font-family: 'Graublau Web';
+    src: url('../graublauweb.eot');
+    src: url('../graublauweb.eot?#iefix') format('embedded-opentype'),
+		          url('../graublauweb.woff') format('woff'),
+			           url('../graublauweb.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.colr {
+color: rgb(51,102,204);
+}
+.subcolr {
+color: rgb(230,32,32);
+}

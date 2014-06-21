@@ -1,0 +1,4 @@
+coreComponent(cpu, alu)
+nonPurposeServingAccessory(cpu, gpu)
+coreComponent(cpu, motherboard)
+coreComponent(cpu, ram)

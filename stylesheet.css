@@ -1,0 +1,26 @@
+
+
+@font-face {
+    font-family: 'Graublau Web';
+    src: url('graublauweb.eot');
+    src: url('graublauweb.eot?#iefix') format('embedded-opentype'),
+         url('graublauweb.woff') format('woff'),
+         url('graublauweb.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'Graublau Web';
+    src: url('graublauwebbold.eot');
+    src: url('graublauwebbold.eot?#iefix') format('embedded-opentype'),
+         url('graublauwebbold.woff') format('woff'),
+         url('graublauwebbold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+
+}

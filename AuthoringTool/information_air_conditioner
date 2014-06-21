@@ -1,0 +1,4 @@
+coreComponent(air_conditioner, button)
+coreComponent(air_conditioner, electricity)
+coreComponent(air_conditioner, fan)
+naccessory(air_conditioner, remote)

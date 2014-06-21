@@ -1,0 +1,4 @@
+coreComponent(wipers, motor)
+coreComponent(wipers, rubber_pads)
+subType(wipers, spring)
+coreComponent(wipers, stick)

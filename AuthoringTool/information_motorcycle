@@ -1,0 +1,5 @@
+coreComponent(motorcycle, body)
+coreComponent(motorcycle, chassis)
+coreComponent(motorcycle, engine)
+nonPurposeServingAccessory(motorcycle, headlight)
+coreComponent(motorcycle, wheel)

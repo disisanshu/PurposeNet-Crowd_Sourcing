@@ -1,0 +1,5 @@
+coreComponent(headlight, bulb)
+coreComponent(headlight, glass)
+coreComponent(headlight, reflectors)
+naccessory(headlight, vehicle)
+coreComponent(headlight, wire)

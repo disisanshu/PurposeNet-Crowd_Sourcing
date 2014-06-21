@@ -1,0 +1,5 @@
+subType(ipod, ipad)
+subType(ipod, iphone)
+subType(ipod, mp3_player)
+subType(ipod, philips_gogear)
+subType(ipod, woxi_smartpod)

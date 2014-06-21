@@ -1,0 +1,5 @@
+coreComponent(seat, cloth)
+nonPurposeServingAccessory(seat, foam)
+nonPurposeServingAccessory(seat, leather)
+nonPurposeServingAccessory(seat, stand)
+coreComponent(seat, wood)

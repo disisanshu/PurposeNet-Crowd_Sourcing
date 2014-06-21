@@ -1,0 +1,3 @@
+purposeServingAccessory(sharpener, blade)
+coreComponent(sharpener, body)
+nAccessory(sharpener, pencil)

@@ -1,0 +1,5 @@
+nonPurposeServingAccessory(pen, body)
+nonPurposeServingAccessory(pen, cap)
+coreComponent(pen, ink)
+coreComponent(pen, nib)
+coreComponent(pen, refill)

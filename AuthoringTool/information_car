@@ -1,0 +1,8 @@
+coreComponent(car, engine)
+coreComponent(car, mirrors)
+nonPurposeServingAccessory(car, musicplayer)
+nonPurposeServingAccessory(car, numberplate)
+purposeServingAccessory(car, petrol)
+purposeServingAccessory(car, seatbelt)
+coreComponent(car, steering)
+coreComponent(car, wheels)

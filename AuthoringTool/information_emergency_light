@@ -1,0 +1,2 @@
+coreComponent(emergency_light, bulb)
+coreComponent(emergency_light, electricity)

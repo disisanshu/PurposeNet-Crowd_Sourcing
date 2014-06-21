@@ -1,0 +1,1707 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+<!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+	xml:base="http://www.semanticweb.org/root/ontologies/2013/4/purposenet"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:xml="http://www.w3.org/XML/1998/namespace"
+	ontologyIRI="http://www.semanticweb.org/root/ontologies/2013/4/purposenet">
+	<Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+	<Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+	<Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+	<Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+	<Declaration>
+		<Class IRI="#artifacts"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#car"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#wheels"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#engine"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#seatbelt"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#mirrors"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#steering"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#numberplate"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#musicplayer"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#petrol"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#mobile"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#sim_card"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#screen"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#aduio_player"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#battery"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#earphones"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#jack"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#bass"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#wipers"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#motor"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#rubber_pads"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#spring"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#stick"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#paint"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#bolts"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#power"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#iron"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#brush"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#color_plate"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#stand"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#bluetooth"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#truck"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#rear_view_mirror"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#tyres"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#seat"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#containers"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#headlight"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#computer"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#mouse"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#keyboard"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#cpu"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#ram"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#alu"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#tyre"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#rubber"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#motherboard"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#gpu"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#wood"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#cloth"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#metal"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#aluminium"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#goods"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#plastic"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#chip"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#bulb"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#wire"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#glass"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#vehicle"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#wires"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#motion_sensor_chip"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#air_conditioner"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#remote"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#fan"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#button"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#electricity"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#traffic_lights"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#light"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#pole"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#microphone"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#transmitter"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#emergency_light"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#stopwatch"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#machine"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#belt"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#home_theatres"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#amplifier"/>
+	</Declaration>
+	<Declaration>
+		<Class IRI="#ac"/>
+	</Declaration>
+	<Declaration>
+		<ObjectProperty IRI="#iscoreComponentof"/>
+	</Declaration>
+	<Declaration>
+		<ObjectProperty IRI="#isnAccessoryof"/>
+	</Declaration>
+	<Declaration>
+		<ObjectProperty IRI="#ispurposeServingAccessoryof"/>
+	</Declaration>
+	<Declaration>
+		<ObjectProperty IRI="#isnonPurposeServingAccessoryof"/>
+	</Declaration>
+	<Declaration>
+		<ObjectProperty IRI="#issubTypeof"/>
+	</Declaration>
+	<Declaration>
+		<ObjectProperty IRI="#hascoreComponent"/>
+	</Declaration>
+	<Declaration>
+		<ObjectProperty IRI="#hasnAccessory"/>
+	</Declaration>
+	<Declaration>
+		<ObjectProperty IRI="#haspurposeServingAccessory"/>
+	</Declaration>
+	<Declaration>
+		<ObjectProperty IRI="#hasnonPurposeServingAccessory"/>
+	</Declaration>
+	<Declaration>
+		<ObjectProperty IRI="#hassubType"/>
+	</Declaration>
+	<SubClassOf>
+		<Class IRI="#car"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#wheels"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#engine"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#seatbelt"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#mirrors"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#steering"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#numberplate"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#musicplayer"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#petrol"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#mobile"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#sim_card"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#screen"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#aduio_player"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#battery"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#earphones"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#jack"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#bass"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#wipers"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#motor"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#rubber_pads"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#spring"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#stick"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#paint"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#bolts"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#power"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#iron"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#brush"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#color_plate"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#stand"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#bluetooth"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#truck"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#rear_view_mirror"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#tyres"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#seat"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#containers"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#headlight"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#computer"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#mouse"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#keyboard"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#cpu"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#ram"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#alu"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#tyre"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#rubber"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#motherboard"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#gpu"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#wood"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#cloth"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#metal"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#aluminium"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#goods"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#plastic"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#chip"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#bulb"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#wire"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#glass"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#vehicle"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#wires"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#motion_sensor_chip"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#air_conditioner"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#remote"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#fan"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#button"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#electricity"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#traffic_lights"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#light"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#pole"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#microphone"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#transmitter"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#emergency_light"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#stopwatch"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#machine"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#belt"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#home_theatres"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#amplifier"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#ac"/>
+		<Class IRI="#artifacts"/>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#fan"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#iscoreComponentof"/>
+			<Class IRI="#ac"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#ac"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hascoreComponent"/>
+			<Class IRI="#fan"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#plastic"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#iscoreComponentof"/>
+			<Class IRI="#ac"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#ac"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hascoreComponent"/>
+			<Class IRI="#plastic"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#motor"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#iscoreComponentof"/>
+			<Class IRI="#ac"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#ac"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hascoreComponent"/>
+			<Class IRI="#motor"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#stand"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#isnAccessoryof"/>
+			<Class IRI="#mirrors"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#mirrors"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hasnAccessory"/>
+			<Class IRI="#stand"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#wood"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#iscoreComponentof"/>
+			<Class IRI="#seat"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#seat"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hascoreComponent"/>
+			<Class IRI="#wood"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#cloth"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#iscoreComponentof"/>
+			<Class IRI="#seat"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#seat"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hascoreComponent"/>
+			<Class IRI="#cloth"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#stand"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#isnonPurposeServingAccessoryof"/>
+			<Class IRI="#seat"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#seat"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hasnonPurposeServingAccessory"/>
+			<Class IRI="#stand"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#mouse"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#iscoreComponentof"/>
+			<Class IRI="#computer"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#computer"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hascoreComponent"/>
+			<Class IRI="#mouse"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#keyboard"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#iscoreComponentof"/>
+			<Class IRI="#computer"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#computer"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hascoreComponent"/>
+			<Class IRI="#keyboard"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#cpu"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#iscoreComponentof"/>
+			<Class IRI="#computer"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#computer"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hascoreComponent"/>
+			<Class IRI="#cpu"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#wires"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#iscoreComponentof"/>
+			<Class IRI="#mouse"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#mouse"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hascoreComponent"/>
+			<Class IRI="#wires"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#motion_sensor_chip"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#iscoreComponentof"/>
+			<Class IRI="#mouse"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#mouse"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hascoreComponent"/>
+			<Class IRI="#motion_sensor_chip"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#motor"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#iscoreComponentof"/>
+			<Class IRI="#wipers"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#wipers"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hascoreComponent"/>
+			<Class IRI="#motor"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#rubber_pads"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#iscoreComponentof"/>
+			<Class IRI="#wipers"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#wipers"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hascoreComponent"/>
+			<Class IRI="#rubber_pads"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#spring"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#issubTypeof"/>
+			<Class IRI="#wipers"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#wipers"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hassubType"/>
+			<Class IRI="#spring"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#stick"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#iscoreComponentof"/>
+			<Class IRI="#wipers"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#wipers"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hascoreComponent"/>
+			<Class IRI="#stick"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#transmitter"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#iscoreComponentof"/>
+			<Class IRI="#microphone"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#microphone"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hascoreComponent"/>
+			<Class IRI="#transmitter"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#bulb"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#iscoreComponentof"/>
+			<Class IRI="#headlight"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#headlight"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hascoreComponent"/>
+			<Class IRI="#bulb"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#wire"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#iscoreComponentof"/>
+			<Class IRI="#headlight"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#headlight"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hascoreComponent"/>
+			<Class IRI="#wire"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#glass"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#iscoreComponentof"/>
+			<Class IRI="#headlight"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#headlight"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hascoreComponent"/>
+			<Class IRI="#glass"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#vehicle"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#isnAccessoryof"/>
+			<Class IRI="#headlight"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#headlight"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hasnAccessory"/>
+			<Class IRI="#vehicle"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#brush"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#ispurposeServingAccessoryof"/>
+			<Class IRI="#paint"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#paint"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#haspurposeServingAccessory"/>
+			<Class IRI="#brush"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#color_plate"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#isnAccessoryof"/>
+			<Class IRI="#paint"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#paint"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hasnAccessory"/>
+			<Class IRI="#color_plate"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#rubber"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#iscoreComponentof"/>
+			<Class IRI="#tyre"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#tyre"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hascoreComponent"/>
+			<Class IRI="#rubber"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#machine"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#iscoreComponentof"/>
+			<Class IRI="#stopwatch"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#stopwatch"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hascoreComponent"/>
+			<Class IRI="#machine"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#belt"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#iscoreComponentof"/>
+			<Class IRI="#stopwatch"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#stopwatch"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hascoreComponent"/>
+			<Class IRI="#belt"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#light"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#isnonPurposeServingAccessoryof"/>
+			<Class IRI="#stopwatch"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#stopwatch"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hasnonPurposeServingAccessory"/>
+			<Class IRI="#light"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#light"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#iscoreComponentof"/>
+			<Class IRI="#traffic_lights"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#traffic_lights"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hascoreComponent"/>
+			<Class IRI="#light"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#pole"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#iscoreComponentof"/>
+			<Class IRI="#traffic_lights"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#traffic_lights"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hascoreComponent"/>
+			<Class IRI="#pole"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#metal"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#iscoreComponentof"/>
+			<Class IRI="#containers"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#containers"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hascoreComponent"/>
+			<Class IRI="#metal"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#aluminium"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#iscoreComponentof"/>
+			<Class IRI="#containers"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#containers"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hascoreComponent"/>
+			<Class IRI="#aluminium"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#goods"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#ispurposeServingAccessoryof"/>
+			<Class IRI="#containers"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#containers"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#haspurposeServingAccessory"/>
+			<Class IRI="#goods"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#bolts"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#iscoreComponentof"/>
+			<Class IRI="#engine"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#engine"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hascoreComponent"/>
+			<Class IRI="#bolts"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#power"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#iscoreComponentof"/>
+			<Class IRI="#engine"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#engine"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hascoreComponent"/>
+			<Class IRI="#power"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#iron"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#iscoreComponentof"/>
+			<Class IRI="#engine"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#engine"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hascoreComponent"/>
+			<Class IRI="#iron"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#bulb"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#iscoreComponentof"/>
+			<Class IRI="#emergency_light"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#emergency_light"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hascoreComponent"/>
+			<Class IRI="#bulb"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#electricity"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#iscoreComponentof"/>
+			<Class IRI="#emergency_light"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#emergency_light"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hascoreComponent"/>
+			<Class IRI="#electricity"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#plastic"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#iscoreComponentof"/>
+			<Class IRI="#bluetooth"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#bluetooth"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hascoreComponent"/>
+			<Class IRI="#plastic"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#chip"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#iscoreComponentof"/>
+			<Class IRI="#bluetooth"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#bluetooth"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hascoreComponent"/>
+			<Class IRI="#chip"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#jack"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#iscoreComponentof"/>
+			<Class IRI="#earphones"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#earphones"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hascoreComponent"/>
+			<Class IRI="#jack"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#bass"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#ispurposeServingAccessoryof"/>
+			<Class IRI="#earphones"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#earphones"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#haspurposeServingAccessory"/>
+			<Class IRI="#bass"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#rubber"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#iscoreComponentof"/>
+			<Class IRI="#tyres"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#tyres"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hascoreComponent"/>
+			<Class IRI="#rubber"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#computer"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#isnAccessoryof"/>
+			<Class IRI="#home_theatres"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#home_theatres"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hasnAccessory"/>
+			<Class IRI="#computer"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#amplifier"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#iscoreComponentof"/>
+			<Class IRI="#home_theatres"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#home_theatres"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hascoreComponent"/>
+			<Class IRI="#amplifier"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#bass"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#ispurposeServingAccessoryof"/>
+			<Class IRI="#home_theatres"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#home_theatres"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#haspurposeServingAccessory"/>
+			<Class IRI="#bass"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#remote"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#isnAccessoryof"/>
+			<Class IRI="#air_conditioner"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#air_conditioner"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hasnAccessory"/>
+			<Class IRI="#remote"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#fan"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#iscoreComponentof"/>
+			<Class IRI="#air_conditioner"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#air_conditioner"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hascoreComponent"/>
+			<Class IRI="#fan"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#button"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#iscoreComponentof"/>
+			<Class IRI="#air_conditioner"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#air_conditioner"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hascoreComponent"/>
+			<Class IRI="#button"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#electricity"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#iscoreComponentof"/>
+			<Class IRI="#air_conditioner"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#air_conditioner"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hascoreComponent"/>
+			<Class IRI="#electricity"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#wheels"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#iscoreComponentof"/>
+			<Class IRI="#car"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#car"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hascoreComponent"/>
+			<Class IRI="#wheels"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#engine"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#iscoreComponentof"/>
+			<Class IRI="#car"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#car"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hascoreComponent"/>
+			<Class IRI="#engine"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#seatbelt"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#ispurposeServingAccessoryof"/>
+			<Class IRI="#car"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#car"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#haspurposeServingAccessory"/>
+			<Class IRI="#seatbelt"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#mirrors"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#iscoreComponentof"/>
+			<Class IRI="#car"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#car"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hascoreComponent"/>
+			<Class IRI="#mirrors"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#steering"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#iscoreComponentof"/>
+			<Class IRI="#car"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#car"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hascoreComponent"/>
+			<Class IRI="#steering"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#numberplate"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#isnonPurposeServingAccessoryof"/>
+			<Class IRI="#car"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#car"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hasnonPurposeServingAccessory"/>
+			<Class IRI="#numberplate"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#musicplayer"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#isnonPurposeServingAccessoryof"/>
+			<Class IRI="#car"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#car"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hasnonPurposeServingAccessory"/>
+			<Class IRI="#musicplayer"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#petrol"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#ispurposeServingAccessoryof"/>
+			<Class IRI="#car"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#car"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#haspurposeServingAccessory"/>
+			<Class IRI="#petrol"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#seatbelt"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#isnonPurposeServingAccessoryof"/>
+			<Class IRI="#car"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#car"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hasnonPurposeServingAccessory"/>
+			<Class IRI="#seatbelt"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#petrol"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#iscoreComponentof"/>
+			<Class IRI="#car"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#car"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hascoreComponent"/>
+			<Class IRI="#petrol"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#mirrors"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#ispurposeServingAccessoryof"/>
+			<Class IRI="#car"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#car"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#haspurposeServingAccessory"/>
+			<Class IRI="#mirrors"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#petrol"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#isnAccessoryof"/>
+			<Class IRI="#car"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#car"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hasnAccessory"/>
+			<Class IRI="#petrol"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#paint"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#iscoreComponentof"/>
+			<Class IRI="#numberplate"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#numberplate"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hascoreComponent"/>
+			<Class IRI="#paint"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#sim_card"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#iscoreComponentof"/>
+			<Class IRI="#mobile"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#mobile"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hascoreComponent"/>
+			<Class IRI="#sim_card"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#screen"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#iscoreComponentof"/>
+			<Class IRI="#mobile"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#mobile"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hascoreComponent"/>
+			<Class IRI="#screen"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#aduio_player"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#isnonPurposeServingAccessoryof"/>
+			<Class IRI="#mobile"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#mobile"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hasnonPurposeServingAccessory"/>
+			<Class IRI="#aduio_player"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#battery"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#iscoreComponentof"/>
+			<Class IRI="#mobile"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#mobile"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hascoreComponent"/>
+			<Class IRI="#battery"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#earphones"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#isnonPurposeServingAccessoryof"/>
+			<Class IRI="#mobile"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#mobile"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hasnonPurposeServingAccessory"/>
+			<Class IRI="#earphones"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#sim_card"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#ispurposeServingAccessoryof"/>
+			<Class IRI="#mobile"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#mobile"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#haspurposeServingAccessory"/>
+			<Class IRI="#sim_card"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#bluetooth"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#isnonPurposeServingAccessoryof"/>
+			<Class IRI="#mobile"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#mobile"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hasnonPurposeServingAccessory"/>
+			<Class IRI="#bluetooth"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#rear_view_mirror"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#isnonPurposeServingAccessoryof"/>
+			<Class IRI="#truck"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#truck"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hasnonPurposeServingAccessory"/>
+			<Class IRI="#rear_view_mirror"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#tyres"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#iscoreComponentof"/>
+			<Class IRI="#truck"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#truck"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hascoreComponent"/>
+			<Class IRI="#tyres"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#seat"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#iscoreComponentof"/>
+			<Class IRI="#truck"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#truck"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hascoreComponent"/>
+			<Class IRI="#seat"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#containers"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#iscoreComponentof"/>
+			<Class IRI="#truck"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#truck"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hascoreComponent"/>
+			<Class IRI="#containers"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#headlight"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#ispurposeServingAccessoryof"/>
+			<Class IRI="#truck"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#truck"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#haspurposeServingAccessory"/>
+			<Class IRI="#headlight"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#rear_view_mirror"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#iscoreComponentof"/>
+			<Class IRI="#truck"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#truck"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hascoreComponent"/>
+			<Class IRI="#rear_view_mirror"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#truck"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#ispurposeServingAccessoryof"/>
+			<Class IRI="#wheels"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#wheels"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#haspurposeServingAccessory"/>
+			<Class IRI="#truck"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#ram"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#iscoreComponentof"/>
+			<Class IRI="#cpu"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#cpu"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hascoreComponent"/>
+			<Class IRI="#ram"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#alu"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#iscoreComponentof"/>
+			<Class IRI="#cpu"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#cpu"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hascoreComponent"/>
+			<Class IRI="#alu"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#motherboard"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#iscoreComponentof"/>
+			<Class IRI="#cpu"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#cpu"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hascoreComponent"/>
+			<Class IRI="#motherboard"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#gpu"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#isnonPurposeServingAccessoryof"/>
+			<Class IRI="#cpu"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+	<SubClassOf>
+		<Class IRI="#cpu"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#hasnonPurposeServingAccessory"/>
+			<Class IRI="#gpu"/>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+</Ontology>

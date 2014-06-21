@@ -1,0 +1,2 @@
+coreComponent(traffic_lights, light)
+coreComponent(traffic_lights, pole)

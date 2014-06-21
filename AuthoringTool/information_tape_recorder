@@ -1,0 +1,4 @@
+purposeServingAccessory(tape_recorder, casette)
+coreComponent(tape_recorder, magnet)
+purposeServingAccessory(tape_recorder, magnetic_tape)
+purposeServingAccessory(tape_recorder, speaker)

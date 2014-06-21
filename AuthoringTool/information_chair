@@ -1,0 +1,4 @@
+nAccessory(chair, human)
+subType(chair, movable)
+coreComponent(chair, screw)
+subType(chair, wood)

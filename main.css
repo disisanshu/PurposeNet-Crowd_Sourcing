@@ -1,0 +1,89 @@
+::-webkit-input-placeholder { font-family:'Open Sans'; }
+::-moz-placeholder { font-family:'Open Sans'; } /* firefox 19+ */
+:-ms-input-placeholder { font-family:'Open Sans'; } /* ie */
+input:-moz-placeholder { font-family:'Open Sans'; }
+
+
+
+body {
+font-family:'Open Sans';
+}
+
+#login-form {
+ float:right;
+ margin-top:10px;
+ margin-right:20px;
+}
+
+#register {
+ position:absolute;
+ top:40%;
+}
+
+#name {
+ position:absolute;
+ top:40%;
+ left:10%;
+ font: 60px bold 'Monofett',cursive;
+}
+
+#tc {
+
+font-size:13px;
+}
+
+#register_form {
+ 
+  float:right;
+  width:50%;
+
+}
+
+
+hr {
+ border:0;
+ height:0;
+ border-top:1px solid rgba(0,0,0,0.1);
+ border-bottom:1px solid rgba(255,255,255,0.3);
+
+}
+
+
+.input-large {
+border-radius:1px;
+
+}
+
+
+.btn {
+
+font-family:'Open Sans'
+border-radius:4px;
+
+}
+
+
+#register_submit {
+
+width:230px;
+height:35px;
+padding-top:6px;
+font-size:10px;
+font-family:'Open Sans'
+}
+
+#fname {
+width:105px;
+}
+
+
+#login_submit {
+
+vertical-align:5px;
+width:80px;
+font-family:'Open Sans';
+font-size:10px;
+}
+
+
+

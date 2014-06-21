@@ -1,0 +1,4 @@
+purposeServingAccessory(mobile_charger, mobile)
+nAccessory(mobile_charger, plug)
+nAccessory(mobile_charger, switchboard)
+coreComponent(mobile_charger, wire)

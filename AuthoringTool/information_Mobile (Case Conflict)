@@ -1,0 +1,6 @@
+nonPurposeServingAccessory(mobile, aduio_player)
+coreComponent(mobile, battery)
+nonPurposeServingAccessory(mobile, bluetooth)
+nonPurposeServingAccessory(mobile, earphones)
+coreComponent(mobile, screen)
+coreComponent(mobile, sim_card)

@@ -1,0 +1,2 @@
+coreComponent(mouse, motion_sensor_chip)
+coreComponent(mouse, wires)

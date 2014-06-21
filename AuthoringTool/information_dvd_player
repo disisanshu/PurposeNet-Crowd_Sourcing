@@ -1,0 +1,3 @@
+purposeServingAccessory(dvd_player, cd)
+nAccessory(dvd_player, remote)
+coreComponent(dvd_player, wire)

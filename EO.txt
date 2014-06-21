@@ -1,0 +1,10 @@
+﻿Bluetooth_Headset
+KeyBoard
+Mouse
+Digital_Camera
+Digital_Photo_Frame
+Cables
+Radio
+Phone
+Digital_Photo_Frame
+Hard_Disk

@@ -1,0 +1,3 @@
+coreComponent(engine, bolts)
+coreComponent(engine, iron)
+coreComponent(engine, power)

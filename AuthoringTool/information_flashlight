@@ -1,0 +1,3 @@
+coreComponent(flashlight, bulb)
+coreComponent(flashlight, button)
+purposeServingAccessory(flashlight, case)

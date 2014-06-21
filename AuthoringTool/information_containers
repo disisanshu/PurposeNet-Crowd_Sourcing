@@ -1,0 +1,5 @@
+coreComponent(containers, aluminium)
+coreComponent(containers, base)
+nonPurposeServingAccessory(containers, cover)
+purposeServingAccessory(containers, goods)
+coreComponent(containers, metal)
