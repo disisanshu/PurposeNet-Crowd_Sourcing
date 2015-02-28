@@ -1,5 +1,5 @@
 <?php
-session_start();
+//session_start();
 ?>
 <div class="container" style="margin:20px auto;width:85%;">
 <p style=" font-family:Arial,sans-serif;font-size:21px;">
@@ -16,9 +16,9 @@ session_start();
 			<ul class="nav">
 				<li id="home" ><a href="./home.php" class="divider-vertical;"  id="hometext"><i class="icon-home icon-white"></i>&nbsp;Home</a></li>
 				<li id="walkthrough" ><a href="./walkthrough.php" class="divider-vertical;" id="walkthroughtext" ><i class="icon-chevron-right icon-white"></i>&nbsp;Walkthrough</a></li>
-				<li id="first" ><a href="./firststep.php" class="divider-vertical;" id="firsttext" ><i class="icon-chevron-right icon-white"></i>&nbsp;First Step</a></li>
-				<li id="second" ><a href="./secondstep.php" class="divider-vertical;" id="secondtext" ><i class="icon-chevron-right icon-white"></i>&nbsp;Second Step</a></li>
-				<li id="third" ><a href="./theme.php" class="divider-vertical;" id="thirdtext" ><i class=" icon-chevron-right icon-white"></i>&nbsp;Third Step</a></li>
+				<li id="first" ><a href="./actionFeature.php" class="divider-vertical;" id="firsttext" ><i class="icon-chevron-right icon-white"></i>&nbsp;First Step</a></li>
+				<li id="second" ><a href="./components.php" class="divider-vertical;" id="secondtext" ><i class="icon-chevron-right icon-white"></i>&nbsp;Second Step</a></li>
+				<li id="third" ><a href="./actionOntology.php" class="divider-vertical;" id="thirdtext" ><i class=" icon-chevron-right icon-white"></i>&nbsp;Third Step</a></li>
 				<li id="fourth" ><a href="./fourthstep.php" class="divider-vertical;" id="fourthtext" ><i class=" icon-chevron-right icon-white"></i>&nbsp;Fourth Step</a></li>
 				<li id="check" ><a href="./checkstep.php" class="divider-vertical;" id="checktext" ><i class=" icon-chevron-right icon-white"></i>&nbsp;Check Step</a></li>
 				<li><a href="./data.php" class="divider-vertical;" target="_blank"><i class=" icon-chevron-right icon-white"></i>&nbsp;PurposeNet Wiki</a></li>

@@ -11,7 +11,7 @@ $domain = "";
 if(ISSET($_POST["domain"])) {
 	$domain = $_POST["domain"];
 	$_SESSION["domain"] = $domain;
-	header("Location:./firststep.php");
+	header("Location:./actionFeature.php");
 }
 
 ?>
@@ -85,7 +85,7 @@ $("#hometext").css('color','White');
 		</form>
 	</p>
 	<p style="margin:20px" align="center">
-		<a href="./firststep.php"><button class="btn btn-primary btn-large">Proceed to enter new data</button></a>
+		<a href="./actionFeature.php"><button class="btn btn-primary btn-large">Proceed to enter new data</button></a>
 		<br>
 		OR
 		<br>

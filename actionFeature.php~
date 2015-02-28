@@ -1,4 +1,113 @@
 <!DOCTYPE HTML>
+<?php
+include("login_check.php");
+include("db_connection.php");
+
+// Variable declarations here
+$birth= $_POST["birth"];
+$purpose= $_POST["primarypurpose"];
+$destruction= $_POST["destruction"];
+$change= $_POST["change"];
+$defaultTab= "birth";	// default tab check variable
+// CODE for 'add' button
+if(isset($_POST["addBirth"]))// && isset($_POST["birth"]))
+{
+	$flagBirth = 0;
+	$defaultTab= "birth";
+	if($birth)
+	{
+		$_SESSION["main"] = $main;
+		$flagBirth = 2;
+		$birth = strtolower($birth);
+		$birth = trim($birth);
+		$birth = str_replace(" ","_",$birth);
+		mysql_query("INSERT INTO birth ( ArtifactName , Birth ) VALUES ('$main', '$birth')", $con1);
+		unset($_POST["addBirth"]);
+	}
+	else
+	{
+		$flagBirth = 1;
+	}
+}
+else if(isset($_POST["addPurpose"]))// && isset($_POST["primarypurpose"]))
+{
+	$flagPurpose = 0;
+	$defaultTab= "purpose";
+	if($purpose)
+	{
+		$_SESSION["main"] = $main;
+		mysql_query("INSERT INTO `usage` ( `main` , `purpose` ) VALUES ('$main', '$purpose')", $con);
+		$id = mysql_insert_id();
+		mysql_query("INSERT INTO udata (uname, tname, rowid ) VALUES ('$uname', 'usage', '$id') ", $con);
+		$flagPurpose = 2;
+		$purpose = strtolower($purpose);
+		$purpose = trim($purpose);
+		$purpose = str_replace(" ","_",$purpose);
+		$_SESSION["action"]= $purpose;
+		unset($_POST["addPurpose"]);
+	}
+	else
+	{
+		$flagPurpose = 1;
+	}
+}
+else if(isset($_POST["addDestruction"]))// && isset($_POST["destruction"]))
+{
+	$flagDestruction = 0;
+	$defaultTab= "destruction";
+	if($destruction)
+	{
+		$_SESSION["main"] = $main;
+		$flagDestruction = 2;
+		$destruction = strtolower($destruction);
+		$destruction = trim($destruction);
+		$destruction = str_replace(" ","_",$destruction);
+		mysql_query("INSERT INTO birth ( ArtifactName , Destruction ) VALUES ('$main', '$destruction')", $con1);
+		unset($_POST["addDestruction"]);
+	}
+	else
+	{
+		$flagDestruction = 1;
+	}
+}
+// CODE for 'change the artifact' button for all the three tabs.
+else if(isset($_POST["change"]))
+{
+	$domain = $_SESSION["domain"];
+	$result = mysql_query("SELECT * FROM objects_fwdc WHERE domain='$domain' ORDER BY RAND() LIMIT 1", $con);
+	$main = mysql_fetch_array($result)["main"];
+}
+// CODE for 'submit' button for all the TABs
+else if(isset($_POST["submitBirth"]))
+{
+	$defaultTab= "purpose";
+	unset($_POST["submitBirth"]);
+}
+else if(isset($_POST["submitPurpose"]))
+{
+	$defaultTab= "destruction";
+	unset($_POST["submitPurpose"]);
+}
+else if(isset($_POST["submitSemanticRoles"]))
+{
+	header("Location:./components.php");
+}
+// if the page is loaded for the first time
+else
+{
+	if($_SESSION["main"])
+	{
+		$main = $_SESSION["main"];
+		$domain = $_SESSION["domain"];
+	}
+	else
+	{
+		$domain = $_SESSION["domain"];
+		$result = mysql_query("SELECT * FROM objects_fwdc  WHERE domain='$domain' ORDER BY RAND() LIMIT 1", $con);
+		$main = mysql_fetch_array($result)["main"];
+	}
+}
+?>
 <html>
 <head lang="en">
 	<title>Action Feature</title>
@@ -37,13 +146,34 @@ $("#firsttext").css('color','rgb(255,255,255)');
 <div class="container-fluid" style="border-radius:10px; box-shadow:10px 10px 10px 10px rgba(0,0,0,0.4);padding:20px;width:90%;margin:auto">
 	<div class="bs-example bs-example-tabs">
 		<ul id="myTab" class="nav nav-tabs">
-			<li class="active" style="width:33.33%; text-align:center;"><a href="#birth" data-toggle="tab">Birth of Artifact</a></li>
-			<li style="width:33.33%; text-align:center;"><a href="#purpose" data-toggle="tab">Main Usage of Artifact</a></li>
-			<li style="width:33.33%; text-align:center;"><a href="#destruction" data-toggle="tab">Destruction of Artifact</a></li>
+			<li <?php if($defaultTab=='birth') echo 'class="active"'; ?> style="width:33.33%; text-align:center;"><a href="#birth" data-toggle="tab">Birth of Artifact</a></li>
+			<li <?php if($defaultTab=='purpose') echo 'class="active"'; ?> style="width:33.33%; text-align:center;"><a href="#purpose" data-toggle="tab">Main Usage of Artifact</a></li>
+			<li <?php if($defaultTab=='destruction') echo 'class="active"'; ?> style="width:33.33%; text-align:center;"><a href="#destruction" data-toggle="tab">Destruction of Artifact</a></li>
 		</ul>
 	</div>
 	<div class="tab-content" id="myTabContent">
-		<div class="tab-pane fade in active" id="birth">
+		<div class="tab-pane fade <?php if($defaultTab=='birth') echo 'in active'; ?>" id="birth">
+<?php
+if ($flagBirth == 1 && $defaultTab=='birth')
+{
+?>
+	<div class="alert alert-danger">
+		Press 'Submit' only after filling atleast one of the available boxes.
+		<button type="button" class="close" data-dismiss="alert">&times;</button>
+	</div>
+<?php
+}
+if ($flagBirth == 2 && $defaultTab=='birth')
+{
+?>
+	
+	<div class="alert alert-success">
+		Submitted successfully. If you don't want to fill more <b>Press <i>'Next Step'</i></b> else continue!
+		<button type="button" class="close" data-dismiss="alert">&times;</button>
+	</div>
+<?php
+}
+?>
 			</br>
 			<p style="color:black;font: 15px Droid Sans;text-align:center;">
 			<?php echo strtoupper($main); ?> belongs to the <?php echo strtoupper($_SESSION["domain"]); ?> domain.
@@ -52,7 +182,7 @@ $("#firsttext").css('color','rgb(255,255,255)');
 			Example: Process of creation of 'PEN'<br>
 		        <input class="input-xlarge" id="disabledInput" type="text" style="margin:5px; width:200px;" placeholder="Integrate body parts" disabled>
 			</p>
-			<form action="firststep.php" method="post" >
+			<form action="actionFeature.php" method="post" >
 			<p style="color:black;font: 20px Droid Sans;text-align:center;">
 				Write the step-wise process for creation of the '<?php $_SESSION["present"]=$main; echo strtoupper($main); ?>'
 				<input type="submit" name="change" value="Change the Artifact" class="btn btn-inverse btn-mini" />
@@ -63,13 +193,14 @@ $("#firsttext").css('color','rgb(255,255,255)');
 			</p>
 
 			<p style="color:black;font: italic 20px Droid Sans;">
-			<form action="firststep.php" method="post" style="text-align:center;">
+			<form action="actionFeature.php" method="post" style="text-align:center;">
 	<!--			<textarea name="primarypurpose" cols=43 autocomplete=off /></textarea><br> -->
-				<textarea name="primarypurpose" cols="43" autocomplete="off" style="margin: 0px 0px 10px; height: 150px; width: 457px;"></textarea><br>
+				<textarea name="birth" cols="43" autocomplete="off" style="margin: 0px 0px 10px; height: 150px; width: 457px;"></textarea><br>
 				<div class="form-group">
 					<div class="col-sm-offset-2 col-sm-10" id="submitButtonComponent" align="center">
-						<button type="submit" id="submit" name="add" value="Submit" class="btn btn-primary">Submit</button>
-						<button type="submit" id="next" name="submit" value="Go to the Next Step" class="btn btn-success">Next step</button>
+						<input type="hidden" name="main" value=<?php echo $main; ?>  />
+						<button type="submit" id="submit" name="addBirth" value="Submit" class="btn btn-primary">Submit</button>
+						<button type="submit" id="next" name="submitBirth" value="Go to the Next Step" class="btn btn-success">Next step</button>
 					</div>
 				</div>
 				<!--<input type="hidden" name="main" value=<?php echo $main; ?>  />
@@ -78,7 +209,28 @@ $("#firsttext").css('color','rgb(255,255,255)');
 			</form>
 			</p>
 		</div>
-		<div class="tab-pane fade" id="purpose">
+		<div class="tab-pane fade <?php if($defaultTab=='purpose') echo 'in active'; ?>" id="purpose">
+<?php
+if ($flagPurpose == 1 && $defaultTab=='purpose')
+{
+?>
+	<div class="alert alert-danger">
+		Press 'Submit' only after filling atleast one of the available boxes.
+		<button type="button" class="close" data-dismiss="alert">&times;</button>
+	</div>
+<?php
+}
+if ($flagPurpose == 2 && $defaultTab=='purpose')
+{
+?>
+	
+	<div class="alert alert-success">
+		Submitted successfully. If you don't want to fill more <b>Press <i>'Next Step'</i></b> else continue!
+		<button type="button" class="close" data-dismiss="alert">&times;</button>
+	</div>
+<?php
+}
+?>
 			</br>
 			<p style="color:black;font: 15px Droid Sans;text-align:center;">
 			<?php echo strtoupper($main); ?> belongs to the <?php echo strtoupper($_SESSION["domain"]); ?> domain.
@@ -87,7 +239,7 @@ $("#firsttext").css('color','rgb(255,255,255)');
 			Example: Main Usage of 'PEN'<br>
 		        <input class="input-xlarge" id="disabledInput" type="text" style="margin:5px; width:200px;" placeholder="To write something on paper" disabled>
 			</p>
-			<form action="firststep.php" method="post" >
+			<form action="actionFeature.php" method="post" >
 			<p style="color:black;font: 20px Droid Sans;text-align:center;">
 				Write the main usage of '<?php $_SESSION["present"]=$main; echo strtoupper($main); ?>'
 				<input type="submit" name="change" value="Change the Artifact" class="btn btn-inverse btn-mini" />
@@ -98,13 +250,14 @@ $("#firsttext").css('color','rgb(255,255,255)');
 			</p>
 
 			<p style="color:black;font: italic 20px Droid Sans;">
-			<form action="firststep.php" method="post" style="text-align:center;">
+			<form action="actionFeature.php" method="post" style="text-align:center;">
 	<!--			<textarea name="primarypurpose" cols=43 autocomplete=off /></textarea><br> -->
 				<textarea name="primarypurpose" cols="43" autocomplete="off" style="margin: 0px 0px 10px; height: 150px; width: 457px;"></textarea><br>
 				<div class="form-group">
 					<div class="col-sm-offset-2 col-sm-10" id="submitButtonComponent" align="center">
-						<button type="submit" id="submit" name="add" value="Submit" class="btn btn-primary">Submit</button>
-						<button type="submit" id="next" name="submit" value="Go to the Next Step" class="btn btn-success">Next step</button>
+						<input type="hidden" name="main" value=<?php echo $main; ?>  />
+						<button type="submit" id="submit" name="addPurpose" value="Submit" class="btn btn-primary">Submit</button>
+						<button type="submit" id="next" name="submitPurpose" value="Go to the Next Step" class="btn btn-success">Next step</button>
 					</div>
 				</div>
 				<!--<input type="hidden" name="main" value=<?php echo $main; ?>  />
@@ -113,7 +266,28 @@ $("#firsttext").css('color','rgb(255,255,255)');
 			</form>
 			</p>
 		</div>
-		<div class="tab-pane fade" id="destruction">
+		<div class="tab-pane fade <?php if($defaultTab=='destruction') echo 'in active'; ?>" id="destruction">
+<?php
+if ($flagDestruction == 1 && $defaultTab=='destruction')
+{
+?>
+	<div class="alert alert-danger">
+		Press 'Submit' only after filling atleast one of the available boxes.
+		<button type="button" class="close" data-dismiss="alert">&times;</button>
+	</div>
+<?php
+}
+if ($flagDestruction == 2 && $defaultTab=='destruction')
+{
+?>
+	
+	<div class="alert alert-success">
+		Submitted successfully. If you don't want to fill more <b>Press <i>'Next Step'</i></b> else continue!
+		<button type="button" class="close" data-dismiss="alert">&times;</button>
+	</div>
+<?php
+}
+?>
 			</br>
 			<p style="color:black;font: 15px Droid Sans;text-align:center;">
 			<?php echo strtoupper($main); ?> belongs to the <?php echo strtoupper($_SESSION["domain"]); ?> domain.
@@ -122,7 +296,7 @@ $("#firsttext").css('color','rgb(255,255,255)');
 			Example: Result on DESTRUCTION of 'PEN'<br>
 		        <input class="input-xlarge" id="disabledInput" style="margin:5px; width:275px;" type="text" placeholder="Reused to manufacture other plastic goods" disabled>
 			</p>
-			<form action="firststep.php" method="post" >
+			<form action="actionFeature.php" method="post" >
 			<p style="color:black;font: 20px Droid Sans;text-align:center;">
 				Write the result on <i>destruction</i> of '<?php $_SESSION["present"]=$main; echo strtoupper($main); ?>'
 				<input type="submit" name="change" value="Change the Artifact" class="btn btn-inverse btn-mini" />
@@ -133,13 +307,14 @@ $("#firsttext").css('color','rgb(255,255,255)');
 			</p>
 
 			<p style="color:black;font: italic 20px Droid Sans;">
-			<form action="firststep.php" method="post" style="text-align:center;">
+			<form action="actionFeature.php" method="post" style="text-align:center;">
 	<!--			<textarea name="primarypurpose" cols=43 autocomplete=off /></textarea><br> -->
-				<textarea name="destructionResult" cols="43" autocomplete="off" style="margin: 0px 0px 10px; height: 150px; width: 457px;"></textarea><br>
+				<textarea name="destruction" cols="43" autocomplete="off" style="margin: 0px 0px 10px; height: 150px; width: 457px;"></textarea><br>
 				<div class="form-group">
 					<div class="col-sm-offset-2 col-sm-10" id="submitButtonComponent" align="center">
-						<button type="submit" id="submit" name="add" value="Submit" class="btn btn-primary">Submit</button>
-						<button type="submit" id="next" name="submit" value="Go to the Next Step" class="btn btn-success">Next step</button>
+						<input type="hidden" name="main" value=<?php echo $main; ?>  />
+						<button type="submit" id="submit" name="addDestruction" value="Submit" class="btn btn-primary">Submit</button>
+						<button type="submit" id="next" name="submitDestruction" value="Go to the Next Step" class="btn btn-success">Next step</button>
 					</div>
 				</div>
 				<!--<input type="hidden" name="main" value=<?php echo $main; ?>  />

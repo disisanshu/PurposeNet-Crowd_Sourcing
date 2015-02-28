@@ -25,8 +25,7 @@ if(!$defaultTab)
 	$defaultTab= "component";
 // Setup for variables assigning
 $change= $_POST["change"];
-if(isset($_POST["main"]))
-	$main= $_POST["main"];
+$main= $_POST["main"];
 $uname = $_SESSION["email"];
 
 // CODE for the Default setup of the Relation TAB, i.e., when the page will be loaded
@@ -53,18 +52,19 @@ if(!isset($_SESSION["ma"]))
 	}
 }
 $mainRel = $_SESSION["ma"];
-//echo "Main: ".$main."mainRel: ".$mainRel;
+//echo "mainRel: ".$mainRel;
 $result = mysql_query("SELECT * FROM temp WHERE main='$mainRel' AND count<=10 ORDER BY count DESC LIMIT 7", $con);
 $art = array();
+//$tempe= mysql_fetch_array($result);
+//echo "Tempe: ".$tempe;
 $i=0;
 while($row=mysql_fetch_array($result))
 {
 	$art[$i] = $row['artifacts'];
-	//echo "Value ".$i.": ".$art[$i]."</br>";
+	//echo "Value ".$i.": ".$art[$i]"</br>";
 	$i = $i + 1;
 }
 $len = $i;
-//echo "Len: ".$len."i: ".$i."</br>";
 if($_SESSION["i"]+1)
 {
 	$i = $_SESSION["i"];
@@ -72,6 +72,7 @@ if($_SESSION["i"]+1)
 	{
 		$SESSION["i"]= 0;
 		$defaultTab= "purpose";
+		//header("Location:./fourthstep.php");
 	}
 }
 
@@ -233,12 +234,9 @@ if($defaultTab == "component")
 			if($main != $tmp)
 			{
 				$main = $tmp;
-				$_SESSION["main"]= $main;
-				$_SESSION["ma"]= $main;
 				break;
 			}
 		}
-		header("Location:./components.php");
 	}
 	else;
 }
@@ -256,7 +254,6 @@ else if($defaultTab == "relation")
 		$result = mysql_query("SELECT * FROM temp INNER JOIN objects_fwdc ON temp.main=objects_fwdc.main WHERE objects_fwdc.domain='$domain' ORDER BY RAND() LIMIT 1", $con);
 		$row = mysql_fetch_array($result);
 		$_SESSION["ma"] = $row["main"];
-		$_SESSION["main"] = $_SESSION["ma"];
 	}
 
 	
@@ -294,7 +291,7 @@ else if($defaultTab == "relation")
 		{
 			$_SESSION["i"] = $_SESSION["i"] + 1;
 		}
-		header("Location:./components.php");
+		//header("Location:./components.php");
 	}
 	/*
 		CODE for 'NEXT' button in Relation TAB
@@ -318,7 +315,7 @@ else if($defaultTab == "purpose")
 	}
 	else
 	{
-		$result = mysql_query("SELECT * FROM temp GROUP BY main ORDER BY RAND() LIMIT 1", $con);
+		$result = mysql_query("SELECT * FROM temp GROUP BY main ORDER BY RAND() LIMIT 1");
 		$main = mysql_fetch_array($result)["main"];
 	}
 	$roPurpose1= $_POST["ro1"];
@@ -352,22 +349,22 @@ else if($defaultTab == "purpose")
 					$purpose = strtolower($roarray[$i]);
 					$purpose = trim($purpose);
 					$purpose = str_replace(" ","_",$purpose);
-					$result = mysql_query("SELECT count FROM small_purpose WHERE main='$main' AND purpose='$purpose' AND artifacts='$art'", $con);
+					$result = mysql_query("SELECT count FROM small_purpose WHERE main='$main' AND purpose='$purpose' AND artifacts='$art'");
 					$cc = mysql_fetch_array($result);
 					if($cc)
 					{
 						$new_count = $cc['count'] + 1;
-						mysql_query("UPDATE small_purpose SET count=$new_count WHERE main='$main' AND purpose='$purpose' AND artifacts='$art'", $con);
+						mysql_query("UPDATE small_purpose SET count=$new_count WHERE main='$main' AND purpose='$purpose' AND artifacts='$art'");
 				
-						$q = mysql_query("SELECT * FROM small_purpose WHERE count=$new_count AND main='$main' AND purpose='$purpose' AND artifacts='$art'", $con);
+						$q = mysql_query("SELECT * FROM small_purpose WHERE count=$new_count AND main='$main' AND purpose='$purpose' AND artifacts='$art'");
 						$id = mysql_fetch_array($q)["id"];
 					}
 					else
 					{
-						mysql_query("INSERT INTO small_purpose  ( main, artifacts, purpose, count) VALUES ('$main','$art','$purpose',1)", $con);
+						mysql_query("INSERT INTO small_purpose  ( main, artifacts, purpose, count) VALUES ('$main','$art','$purpose',1)");
 						$id = mysql_insert_id();
 					}
-					mysql_query("INSERT INTO udata (uname, tname, rowid ) VALUES ('$uname', 'small_purpose', '$id') ", $con);
+					mysql_query("INSERT INTO udata (uname, tname, rowid ) VALUES ('$uname', 'small_purpose', '$id') ");
 						
 				}
 			}
@@ -386,11 +383,8 @@ else if($defaultTab == "purpose")
 	*/
 	else if(isset($_POST["change"]))
 	{
-		$result = mysql_query("SELECT * FROM temp GROUP BY main ORDER BY RAND() LIMIT 1", $con);
+		$result = mysql_query("SELECT * FROM temp GROUP BY main ORDER BY RAND() LIMIT 1");
 		$main = mysql_fetch_array($result)["main"];
-		$_SESSION["main"]= $main;
-		$_SESSION["ma"]= $main;
-		header("Location:./components.php");
 	}
 	/*
 		CODE for 'NEXT' button in Purpose TAB
@@ -435,29 +429,9 @@ else
 	include("headandnav.php");
 ?>
 <script>
-$("#first").css('background-color','rgb(120,120,120)');
-$("#first").css('border-radius','30px');
-$("#firsttext").css('color','rgb(255,255,255)');
-</script>
-<script>
-  $(document).ready(function() {
-		  <?php 
-		  $hello = array(); 
-		  $file = fopen('dict.txt','r');
-		  while (!feof($file))
-		  {
-		  array_push($hello,fgets($file));
-		  }
-		  array_pop($hello);
-		  $world = json_encode($hello);
-		  echo "var row =".$world.";\n";
-
-		  ?> 
-		  //alert(row);
-		  $(".search").typeahead({source:row,items:10}) 
-  	})
-
-
+$("#second").css('background-color','rgb(120,120,120)');
+$("#second").css('border-radius','30px');
+$("#secondtext").css('color','rgb(255,255,255)');
 </script>
 
 <div class="container-fluid" style="border-radius:10px; box-shadow:10px 10px 10px 10px rgba(0,0,0,0.4);padding:20px;width:90%;margin:auto">
@@ -549,57 +523,36 @@ $("#firsttext").css('color','rgb(255,255,255)');
 			<button class="btn btn-warning pull-right" id="trigger" >Help</button>
 
 			<div draggable="true" id="move" style="font-size: 20px ;text-align:center;" align="center">
-				<i><?php $arti= strtoupper($art[$i]); echo $arti;?></i>
-				</br>
-				</br>
+				<?php echo $art[$i];?>
 			</div>
-			<form action="./components.php" method="POST">
-				<div class="form-group">
-				<div class="col-sm-offset-2 col-sm-10" id="skipArtifact" align="center">
-					<button type="submit" id="submit" name="skip" value="Skip the Artifact" class="btn btn-inverse btn-mini">Skip the Artifact</button>
-				</div>
-			</div>
-			</form>
 			<div class="container-fluid" style="width: 80%;padding-left:15%">
 				<div id="opone">
 					<p style="">
-						<li id="awesome">Required in Manfacture of <b><i><?php echo strtoupper($mainRel); ?></b></i></li>
-						<li id="awesome">Essential for <b><i><?php echo strtoupper($mainRel); ?></b></i>'s primary purpose </li>
-					</br>
+						<li id="awesome">Required in Manfacture of <?php echo $mainRel; ?></li>
+						<li id="awesome">Essential for <?php echo $mainRel; ?>'s primary purpose</li>
 					</p>
 				</div>
 				<div id="optwo">
 					<p style="">
-						<li id="awesome">Not required in Manfacture of <b><i><?php echo strtoupper($mainRel); ?></b></i> but</li>
+						<li id="awesome">Not required in manfacture but</li>
 						<li id="awesome">is a part of it  to fulfill its primary purpose</li>
-					
-					</br>
 					</p>
 				</div>
 				<div id="opthree">
 					<p style="">
-						<li id="awesome">Present in <b><i><?php echo strtoupper($mainRel); ?></b></i> but </li>
+						<li id="awesome">Present in <?php echo $mainRel; ?> but </li>
 						<li id="awesome">Useful in other purposes not primary</li>
-					</br>
-					</br>
 					</p>
 				</div>
 				<div id="opfour">
 					<p style="">
-						<li id="awesome">Not a part of <b><i><?php echo strtoupper($mainRel); ?></b></i> but </li>
+						<li id="awesome">Not a part of <?php echo $mainRel; ?> but </li>
 						<li id="awesome">Required to fulfill its primary purpose.</li>
-					</br>
-					</br>
 					</p>
 				</div>
 				<div id="opfive" >
 					<p style="">
-						<li id="awesome">Subtype of <b><i><?php echo strtoupper($mainRel); ?></b></i></li>
-					</br>
-					</br>
-					</br>
-					</br>
-					</br>
+						<li id="awesome">Subtype of <?php echo $mainRel; ?></li>
 					</p>
 				</div>
 			</div>
@@ -609,7 +562,7 @@ $("#firsttext").css('color','rgb(255,255,255)');
 					<div class="form-group">
 						<div class="col-sm-offset-2 col-sm-10" id="submitButtonRelation" align="center">
 							<input type="hidden" name="tab" value="purpose"  />
-							<!--<button type="submit" id="submit" name="skip" value="Skip the Artifact" class="btn btn-primary">Skip the Artifact</button>-->
+							<button type="submit" id="submit" name="skip" value="Skip the Artifact" class="btn btn-primary">Skip the Artifact</button>
 							<button type="submit" id="next" name="submitRelation" value="Go to the Next Step" class="btn btn-success">Next step</button>
 						</div>
 					</div>

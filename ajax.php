@@ -34,6 +34,6 @@ mysql_query("INSERT INTO udata (uname, tname, rowid ) VALUES ('$uname', 'class',
 $_SESSION["i"] = $_SESSION["i"]+1;
 $_SESSION["main"] = $main;
 
-header("Location:./alt_sec.php");
+header("Location:./components.php");
 
 ?>

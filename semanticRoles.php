@@ -50,7 +50,7 @@ div .form-group { margin-left:125px; }
 			<input type="submit" name="change" value="Change the Artifact" class="btn btn-inverse btn-mini"/>
 		</p>
 		
-		<form id="semanticForm" class="form-horizontal" role="form" action="./semantic_roles.php" method="post" >
+		<form id="semanticForm" class="form-horizontal" role="form" action="./semanticRoles.php" method="post" >
 			<div class="form-group">
 				<div class="dropdown">
 					<form id="dropdownForm" class="dropdown">
