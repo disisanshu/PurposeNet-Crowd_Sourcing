@@ -1,7 +1,0 @@
-<?php
-	$post= $_POST["pass"];
-	echo $post;
-	$_POST["pass"]= "Value Passed!";
-	if(!isset($_POST["pass"])) header("Location:./testing.php");
-	else;
-?>
