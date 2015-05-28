@@ -1,5 +1,0 @@
-<?php
-	echo "Hello World!</br>";
-	$pass= $_POST["pass"];
-	echo $post;
-?>
